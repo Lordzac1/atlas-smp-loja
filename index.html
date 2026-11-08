@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATLAS SMP - Loja Oficial & Servidor Survival</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            atlas: {
+              bg: '#050b14',
+              card: '#0a1526',
+              border: '#15243b',
+              accent: '#2563eb',
+              purple: '#9333ea',
+              magenta: '#c026d3',
+              gold: '#eab308',
+              cyan: '#06b6d4',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #050b14;
+      color: #f3f4f6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .glow-blue {
+      box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.4);
+    }
+    .glow-purple {
+      box-shadow: 0 0 25px -5px rgba(147, 51, 234, 0.4);
+    }
+    .glow-magenta {
+      box-shadow: 0 0 25px -5px rgba(192, 38, 211, 0.4);
+    }
+    .glow-gold {
+      box-shadow: 0 0 25px -5px rgba(234, 179, 8, 0.4);
+    }
+    .glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.4);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+
+  <!-- Navegação -->
+  <header class="sticky top-0 z-50 bg-[#050b14]/90 backdrop-blur-md border-b border-atlas-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-blue-600/30">
+          T
+        </div>
+        <div>
+          <span class="font-black text-xl tracking-wider block leading-none">ATLAS</span>
+          <span class="text-xs font-bold text-blue-400 tracking-widest">SMP</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-2">
+        <button onclick="switchTab('inicio')" id="nav-inicio" class="px-5 py-2.5 rounded-xl font-medium text-sm transition flex items-center gap-2 bg-blue-600 text-white">
+          <i class="fa-solid fa-compass"></i> Início
+        </button>
+        <button onclick="switchTab('loja')" id="nav-loja" class="px-5 py-2.5 rounded-xl font-medium text-sm transition flex items-center gap-2 text-slate-300 hover:text-white hover:bg-atlas-card">
+          <i class="fa-solid fa-store"></i> Loja
+        </button>
+        <a href="https://discord.gg" target="_blank" class="px-5 py-2.5 rounded-xl font-medium text-sm text-slate-300 hover:text-white hover:bg-atlas-card transition flex items-center gap-2">
+          <i class="fa-solid fa-headset"></i> Suporte
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://discord.gg" target="_blank" class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl border border-atlas-border bg-atlas-card text-xs font-semibold hover:border-blue-500 transition">
+          <i class="fa-brands fa-discord text-blue-400"></i> Discord
+        </a>
+        <a href="#" class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl border border-atlas-border bg-atlas-card text-xs font-semibold hover:border-blue-500 transition">
+          <i class="fa-solid fa-user-shield text-blue-400"></i> Form Staff
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Seção INÍCIO -->
+  <main id="tab-inicio" class="flex-1">
+    <section class="max-w-5xl mx-auto px-4 py-16 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold mb-8">
+        <i class="fa-solid fa-shield-halved"></i> Survival PvP Premium
+      </div>
+
+      <p class="text-slate-400 font-medium mb-2">Você está pronto para viver uma experiência diferente de tudo que já viu?</p>
+      
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-200 to-indigo-400 mb-4">
+        Bem-vindo ao Atlas SMP
+      </h1>
+
+      <p class="text-xl text-slate-300 max-w-2xl mx-auto font-medium mb-12">
+        Um Survival onde cada escolha pode mudar sua história.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 text-left mb-16">
+        <div class="p-6 rounded-2xl border border-atlas-border bg-atlas-card/50 backdrop-blur">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-shield"></i>
+          </div>
+          <p class="text-sm text-slate-300">Crie seu clã, forme alianças e participe de guerras épicas.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-atlas-border bg-atlas-card/50 backdrop-blur">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-swords"></i>
+          </div>
+          <p class="text-sm text-slate-300">Domine o PvP, proteja sua base e enfrente outros jogadores.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-atlas-border bg-atlas-card/50 backdrop-blur">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-coins"></i>
+          </div>
+          <p class="text-sm text-slate-300">Negocie no mercado e conquiste recompensas pelo Bounty.</p>
+        </div>
+      </div>
+
+      <div class="space-y-3 text-slate-400 text-sm mb-12">
+        <p><i class="fa-solid fa-sparkles text-blue-400 mr-2"></i> Descubra itens especiais, encontre desafios únicos e evolua dentro do servidor.</p>
+        <p><i class="fa-solid fa-crown text-blue-400 mr-2"></i> Construa seu império, crie sua história e se torne uma lenda no ATLAS SMP.</p>
+      </div>
+
+      <div class="border-t border-atlas-border pt-12">
+        <h2 class="text-lg font-bold text-white mb-2">A aventura começa agora.</h2>
+        <p class="text-blue-400 font-bold mb-8">ATLAS SMP — Onde cada decisão muda o destino do servidor.</p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <button onclick="switchTab('loja')" class="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-lg shadow-blue-600/30 transition flex items-center gap-2">
+            <i class="fa-solid fa-shopping-bag"></i> VER KITS
+          </button>
+          <a href="https://discord.gg" target="_blank" class="px-8 py-4 rounded-xl border border-atlas-border bg-atlas-card hover:bg-slate-800 text-white font-bold text-sm transition flex items-center gap-2">
+            <i class="fa-brands fa-discord text-blue-400"></i> DISCORD
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Seção LOJA -->
+  <main id="tab-loja" class="flex-1 hidden">
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold mb-4">
+          <i class="fa-solid fa-box-open"></i> Loja Oficial
+        </div>
+        <h1 class="text-4xl font-black tracking-tight uppercase text-white mb-3">
+          KITS ATLAS SMP
+        </h1>
+        <p class="text-slate-400 text-sm">
+          Escolha seu kit e domine o servidor! Cada kit oferece vantagens exclusivas para sua jornada.
+        </p>
+      </div>
+
+      <!-- Grid de Kits -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- VIP -->
+        <div class="rounded-2xl border border-blue-600/40 bg-atlas-card p-6 flex flex-col justify-between glow-blue">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white text-xl">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-black text-white">VIP</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-blue-600/30 text-blue-400 text-[10px] font-bold">VIP</span>
+              </div>
+            </div>
+            <div class="mb-6">
+              <span class="text-3xl font-black text-white">R$14</span>
+              <span class="text-slate-400 text-xs">,00</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-atlas-border pt-4">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Tag VIP exclusiva no chat</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Acesso a comandos especiais</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Kit semanal exclusivo</li>
+            </ul>
+          </div>
+          <button onclick="openModal('VIP', 14)" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider transition">
+            Comprar Agora
+          </button>
+        </div>
+
+        <!-- PRO -->
+        <div class="rounded-2xl border border-purple-600/40 bg-atlas-card p-6 flex flex-col justify-between glow-purple">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center text-white text-xl">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-black text-white">PRO</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-purple-600/30 text-purple-400 text-[10px] font-bold">PRO</span>
+              </div>
+            </div>
+            <div class="mb-6">
+              <span class="text-3xl font-black text-white">R$16</span>
+              <span class="text-slate-400 text-xs">,00</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-atlas-border pt-4">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Todas as vantagens do VIP</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Tag PRO destacada</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Slot reservado no servidor</li>
+            </ul>
+          </div>
+          <button onclick="openModal('PRO', 16)" class="w-full py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs uppercase tracking-wider transition">
+            Comprar Agora
+          </button>
+        </div>
+
+        <!-- VIP PLUS -->
+        <div class="rounded-2xl border border-cyan-500/40 bg-atlas-card p-6 flex flex-col justify-between glow-cyan">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500 flex items-center justify-center text-white text-xl">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-black text-white">VIP PLUS</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/30 text-cyan-400 text-[10px] font-bold">VIP PLUS</span>
+              </div>
+            </div>
+            <div class="mb-6">
+              <span class="text-3xl font-black text-white">R$18</span>
+              <span class="text-slate-400 text-xs">,00</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-atlas-border pt-4">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Vantagens VIP & PRO inclusas</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Kit mensal estendido</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Permissão para criar mais homes</li>
+            </ul>
+          </div>
+          <button onclick="openModal('VIP PLUS', 18)" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-white font-bold text-xs uppercase tracking-wider transition">
+            Comprar Agora
+          </button>
+        </div>
+
+        <!-- PRIME -->
+        <div class="rounded-2xl border border-magenta border-fuchsia-600/40 bg-atlas-card p-6 flex flex-col justify-between glow-magenta">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-fuchsia-600 flex items-center justify-center text-white text-xl">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-black text-white">PRIME</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-fuchsia-600/30 text-fuchsia-400 text-[10px] font-bold">PRIME</span>
+              </div>
+            </div>
+            <div class="mb-6">
+              <span class="text-3xl font-black text-white">R$20</span>
+              <span class="text-slate-400 text-xs">,00</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-atlas-border pt-4">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fuchsia-400"></i> Benefícios de tiers inferiores</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fuchsia-400"></i> Acesso antecipado a eventos</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-fuchsia-400"></i> Caixa misteriosa diária</li>
+            </ul>
+          </div>
+          <button onclick="openModal('PRIME', 20)" class="w-full py-3.5 rounded-xl bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold text-xs uppercase tracking-wider transition">
+            Comprar Agora
+          </button>
+        </div>
+
+        <!-- ATLAS -->
+        <div class="rounded-2xl border border-yellow-500/40 bg-atlas-card p-6 flex flex-col justify-between glow-gold md:col-span-2 lg:col-span-1">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center text-white text-xl">
+                <i class="fa-solid fa-crown"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-black text-white">ATLAS</h3>
+                <span class="px-2.5 py-0.5 rounded-full bg-amber-500/30 text-amber-400 text-[10px] font-bold">ATLAS</span>
+              </div>
+            </div>
+            <div class="mb-6">
+              <span class="text-3xl font-black text-white">R$25</span>
+              <span class="text-slate-400 text-xs">,00</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-300 mb-6 border-t border-atlas-border pt-4">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> O VIP mais supremo do servidor</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Tag suprema no chat e Discord</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Todos os kits e vantagens destravados</li>
+            </ul>
+          </div>
+          <button onclick="openModal('ATLAS', 25)" class="w-full py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-white font-bold text-xs uppercase tracking-wider transition">
+            Comprar Agora
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de Confirmação de Nick -->
+  <div id="checkout-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-atlas-card border border-atlas-border w-full max-w-md rounded-2xl p-6 shadow-2xl relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <h3 class="text-xl font-black text-white mb-1">Finalizar Compra</h3>
+      <p class="text-xs text-slate-400 mb-6">Insira o seu Nick do Minecraft para receber o pacote.</p>
+
+      <div class="mb-4">
+        <label class="block text-xs font-bold text-slate-300 mb-2">SEU NICK NO MINECRAFT</label>
+        <input type="text" id="player-nick" placeholder="Ex: Steve_Pro" class="w-full bg-atlas-bg border border-atlas-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+      </div>
+
+      <div class="bg-atlas-bg/50 p-4 rounded-xl border border-atlas-border mb-6 flex justify-between items-center">
+        <span class="text-xs text-slate-400">Pacote Selecionado:</span>
+        <span id="selected-kit-name" class="font-bold text-blue-400 text-sm">VIP</span>
+      </div>
+
+      <button onclick="confirmPurchase()" class="w-full py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl uppercase tracking-wider transition">
+        Ir para Pagamento
+      </button>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="border-t border-atlas-border py-8 bg-[#030712]">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-slate-500">
+      <p>© 2026 ATLAS SMP. Todos os direitos reservados.</p>
+      <p class="mt-1">Não somos afiliados à Mojang Studios.</p>
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(tabName) {
+      document.getElementById('tab-inicio').classList.add('hidden');
+      document.getElementById('tab-loja').classList.add('hidden');
+      
+      document.getElementById('nav-inicio').className = "px-5 py-2.5 rounded-xl font-medium text-sm transition flex items-center gap-2 text-slate-300 hover:text-white hover:bg-atlas-card";
+      document.getElementById('nav-loja').className = "px-5 py-2.5 rounded-xl font-medium text-sm transition flex items-center gap-2 text-slate-300 hover:text-white hover:bg-atlas-card";
+
+      if (tabName === 'inicio') {
+        document.getElementById('tab-inicio').classList.remove('hidden');
+        document.getElementById('nav-inicio').className = "px-5 py-2.5 rounded-xl font-medium text-sm transition flex items-center gap-2 bg-blue-600 text-white";
+      } else {
+        document.getElementById('tab-loja').classList.remove('hidden');
+        document.getElementById('nav-loja').className = "px-5 py-2.5 rounded-xl font-medium text-sm transition flex items-center gap-2 bg-blue-600 text-white";
+      }
+    }
+
+    let selectedKit = '';
+    let selectedPrice = 0;
+
+    function openModal(kitName, price) {
+      selectedKit = kitName;
+      selectedPrice = price;
+      document.getElementById('selected-kit-name').innerText = kitName + " (R$ " + price + ",00)";
+      document.getElementById('checkout-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('checkout-modal').classList.hidden = true;
+      document.getElementById('checkout-modal').classList.add('hidden');
+    }
+
+    function confirmPurchase() {
+      const nick = document.getElementById('player-nick').value;
+      if (!nick) {
+        alert('Por favor, digite seu nick do Minecraft!');
+        return;
+      }
+      alert(`Obrigado! Redirecionando para o pagamento do kit ${selectedKit} para o jogador ${nick}.`);
+      closeModal();
+    }
+  </script>
+</body>
+</html>
